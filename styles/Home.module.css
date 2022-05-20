@@ -1,9 +1,15 @@
 .container {
   padding: 0 2rem;
+  flex-grow: 1;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
-  min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -14,7 +20,6 @@
 
 .footer {
   display: flex;
-  flex: 1;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
   justify-content: center;
@@ -26,6 +31,15 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer a[aria-selected] {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .title a {

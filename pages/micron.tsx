@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Pdf } from "../components/pdf";
 import { Questions } from "../components/questions";
 import styles from "../styles/Home.module.css";
+import micron from "../public/micron.png";
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
         <Pdf
           src="https://media-www.micron.com/-/media/client/global/documents/products/customer-service-note/csn33_bga_user_guide.pdf?rev=c99754802d0547e59ccb6fd83f734991"
           caption="Micron Technology, Inc."
+          fallback={micron}
         />
       </main>
     </div>

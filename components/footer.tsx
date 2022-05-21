@@ -18,7 +18,7 @@ const Footer = () => {
       <nav className={styles.footer}>
         {links.map(([path, name]) => (
           <Link href={path} key={path}>
-            {path === route ? <a aria-selected>{name}</a> : <a>{name}</a>}
+            {path === route ? <a aria-current>{name}</a> : <a>{name}</a>}
           </Link>
         ))}
       </nav>

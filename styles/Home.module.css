@@ -43,7 +43,7 @@
 
 .footer {
   display: flex;
-  padding: 2rem 0;
+  flex-wrap: wrap;
   background-color: white;
   border-top: 1px solid #eaeaea;
   justify-content: center;
@@ -58,6 +58,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 15rem;
+  padding-bottom: 1em;
   flex-grow: 1;
 }
 
@@ -65,7 +67,7 @@
   text-decoration: underline;
 }
 
-.footer a[aria-selected] {
+.footer a[aria-current] {
   font-weight: bold;
   text-decoration: underline;
 }
@@ -77,6 +79,7 @@
   background-color: white;
   border-bottom: 1px solid #eaeaea;
   justify-content: center;
+  text-align: center;
   align-items: center;
   height: 7rem;
   width: 100%;

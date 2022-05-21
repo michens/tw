@@ -8,14 +8,14 @@ type QuestionsProps = {
 const Questions = (props: QuestionsProps) => (
   <article className={styles.article}>
     <h1 className={styles.title}>{props.title}</h1>
-    {props.questions?.map(([q, a], i) => (
-      <ol key={i}>
-        <li>
+    <ol>
+      {props.questions?.map(([q, a], i) => (
+        <li key={i}>
           <p style={{ fontWeight: "bold" }}>{q.join(" ")}</p>
           <p>{a.join(" ")}</p>
         </li>
-      </ol>
-    ))}
+      ))}
+    </ol>
   </article>
 );
 

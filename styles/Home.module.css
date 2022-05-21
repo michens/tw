@@ -1,21 +1,21 @@
 .app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   height: 100vh;
   overflow: hidden;
 }
 
 .container {
   padding: 2rem 4rem;
-  height: calc(100% - 12rem);
   overflow: auto;
+  background-color: #f2f2f2;
 }
 
 .main {
-  padding: 0;
   height: 100%;
   align-items: center;
-  flex-direction: row;
-  display: flex;
-  min-height: 50rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .article {
@@ -30,6 +30,8 @@
   flex: 1;
   flex-direction: column;
   height: 70vh;
+  padding: 1em;
+  border: 1px solid darkslateblue;
 }
 
 .figcaption {
@@ -41,20 +43,28 @@
   text-decoration: underline;
 }
 
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: white;
-  border-top: 1px solid #eaeaea;
+.nav {
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-top: 1px solid darkslateblue;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  bottom: 0;
-  height: 5rem;
-  width: 100%;
+  padding-top: 1rem;
 }
 
-.footer a {
+@media (max-width: 1024px) {
+  .main {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+  }
+  .nav {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.nav a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,26 +73,23 @@
   flex-grow: 1;
 }
 
-.footer a:hover {
+.nav a:hover {
   text-decoration: underline;
 }
 
-.footer a[aria-current] {
+.nav a[aria-current] {
   font-weight: bold;
   text-decoration: underline;
 }
 
 .header {
+  background-color: aliceblue;
   display: flex;
   flex-direction: column;
-  padding: 2em;
-  background-color: white;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid darkslateblue;
   justify-content: center;
+  padding: 2rem;
   text-align: center;
-  align-items: center;
-  height: 7rem;
-  width: 100%;
 }
 
 .title a {

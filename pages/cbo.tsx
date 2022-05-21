@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Pdf } from "../components/pdf";
+import { Questions } from "../components/questions";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -11,7 +13,12 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>CBO</h1>
+        <Questions title="CBO" questions={[]} />
+        <Pdf
+          src="https://www.cbo.gov/sites/default/files/113th-congress-2013-2014/reports/43907-BudgetOutlook.pdf"
+          page={23}
+          caption="U.S Congressional Budget Office"
+        />
       </main>
     </div>
   );

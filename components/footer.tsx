@@ -14,7 +14,7 @@ const Footer = () => {
   const { route } = useRouter();
 
   return (
-    <footer>
+    <footer className={styles.footer}>
       <nav className={styles.nav}>
         {links.map(([path, name]) => (
           <Link href={path} key={path}>

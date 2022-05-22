@@ -79,12 +79,11 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>US DOJ</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Department of Justice</title>
       </Head>
 
       <main className={styles.main}>
-        <Questions title="DOJ" questions={questions} />
+        <Questions title="Department of Justice" questions={questions} />
         <Pdf
           src="https://www.justice.gov/sites/default/files/uspc/legacy/2010/08/27/uspc-manual111507.pdf"
           page={59}

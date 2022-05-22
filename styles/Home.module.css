@@ -9,7 +9,6 @@
   padding: 2rem 4rem;
   overflow: auto;
   background-color: #f2f2f2;
-  align-items: center;
   display: grid;
   justify-content: center;
 }
@@ -17,16 +16,33 @@
 .main {
   height: 100%;
   max-width: 100rem;
-  align-items: center;
+  align-items: flex-start;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 6rem;
+}
+
+.memoHead {
+  column-gap: 2rem;
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-auto-rows: auto;
+  margin-top: 1rem;
 }
 
 .article {
   display: flex;
-  height: 100%;
   flex-direction: column;
-  margin-right: 6rem;
+  max-width: 50rem;
+}
+
+.article a {
+  color: darkblue;
+  opacity: 75%;
+}
+
+.article a:hover {
+  text-decoration: underline;
 }
 
 .figure {
@@ -35,6 +51,10 @@
   height: 100%;
   padding: 1em;
   border: 1px solid darkslateblue;
+}
+
+.fallback {
+  height: auto;
 }
 
 .figcaption {
@@ -59,14 +79,20 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
-  padding-top: 1rem;
+  padding: 1rem;
+  row-gap: 1rem;
 }
 
 @media (max-width: 1024px) {
+  .article {
+    margin-right: 0;
+  }
+
   .main {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 100%;
   }
+
   .nav {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -78,7 +104,6 @@
   justify-content: center;
   align-items: center;
   min-width: 15rem;
-  padding-bottom: 1em;
   flex-grow: 1;
 }
 
@@ -102,17 +127,6 @@
 }
 
 .title {
-  font-size: 4rem;
-}
-
-.title,
-.description {
+  font-size: 2em;
   text-align: center;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
 }

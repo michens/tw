@@ -4,14 +4,21 @@ import type { AppProps } from "next/app";
 
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
+import Head from "next/head";
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={styles.app}>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
-    </div>
+    <>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <div className={styles.app}>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </div>
+    </>
   );
 }
 

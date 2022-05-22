@@ -27,3 +27,9 @@ h2 {
   color: darkblue;
   opacity: 75%;
 }
+
+@media (max-width: 768px) {
+  body {
+    font-size: 10px;
+  }
+}
